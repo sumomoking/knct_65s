@@ -207,4 +207,57 @@ a {
 #page-top-btn.show {
     opacity: 1;
     visibility: visible;
+
+}
+
+@media (max-width: 768px) {
+
+    /* --- GIFグリッドエリアの変更 --- */
+    .grid-container {
+        /* スマホでは2列レイアウトに変更 */
+        grid-template-columns: 1fr 1fr;
+    }
+
+    /* item1のアスペクト比をリセット */
+    .item1 {
+        aspect-ratio: auto;
+    }
+
+    /* 各グリッドアイテムの配置をスマホ用に再設定 */
+    .item1 {
+        /* gif①は2列分つかって一番上に配置 */
+        grid-column: 1 / 3;
+        grid-row: 1 / 2;
+    }
+    .item2 {
+        /* gif①の下の、左の列に配置 */
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+    }
+    .item3 {
+        grid-column: 1 / 2;
+        grid-row: 3 / 4;
+    }
+    .item4 {
+        grid-column: 1 / 2;
+        grid-row: 4 / 5;
+    }
+    .item5 {
+        /* gif①の下の、右の列に配置 */
+        /* 縦に2行分つかう */
+        grid-column: 2 / 3;
+        grid-row: 2 / 4;
+    }
+    .item6 {
+        grid-column: 2 / 3;
+        grid-row: 4 / 5;
+    }
+
+
+    /* --- 本文エリアの調整 --- */
+    .content-body {
+        /* スマホでは左右の余白を少し狭くして、本文を広く見せる */
+        padding: 20px 15px;
+    }
+
 }

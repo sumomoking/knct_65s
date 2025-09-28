@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>久留米高専1Sのホームページ</title>
+    <link rel="stylesheet" href="indexcss.css">
+</head>
+
+<!--ボタンだよ-->
+<div id="page-top-btn">↑</div>
+<script>
+        const pageTopBtn = document.getElementById('page-top-btn');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                pageTopBtn.classList.add('show');
+            } else {
+                pageTopBtn.classList.remove('show');
+            }
+        });
+
+        pageTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
+
+<body>
+
+    <header class="header">
+        <img src="img/header.png" alt="サイトのヘッダー画像" width="1024" height="100">
+    </header>
+
+    <div class="marquee-container">
+        <marquee>久留米高専1Sのホームページへようこそ！</marquee>
+
+    <main class="grid-container">
+        <div class="grid-item item1">
+            <img src="img/top.gif" alt="gif 1" width="1000" height="750">
+        </div>
+
+        <div class="grid-item item2">
+            <a href="https://twitter.com/knct_65s">
+                <img src="img/twitter2.gif" alt="Twitter" width="200" height="100">
+            </a>
+        </div>
+        <div class="grid-item item3">
+            <a href="https://instagram.com/knct_65s">
+                <img src="img/insta2.gif" alt="Instagram" width="200" height="100">
+            </a>
+        </div>
+        <div class="grid-item item4">
+            <a href="https://www.kurume-nct.ac.jp/">
+                <img src="img/knct.gif" alt="KNCT" width="200" height="100">
+            </a>
+        </div>
+        <div class="grid-item item5">
+            <img src="img/welcome.gif" alt="gif 5">
+        </div>
+        <div class="grid-item item6">
+            <a href="">
+                <img src="img/sumaho.gif" alt="gif 6">
+            </a>
+        </div>
+        </main>
+    
+    <footer class="footer">
+        <img src="img/banner.gif" alt="gif 7" width="1024" height="68">
+    </footer>
+
+    <!--本文だよ-->
+
+    <div class="content-body">
+        <h2>2025年高専祭 1Sの出店の案内</h2>
+        <ul class="toc">
+            <li><a href="#gaiyo">・概要</a></li>
+            <li><a href="#date">・日時</a></li>
+            <li><a href="#location">・場所</a></li>
+            <li><a href="#content">・ゲームの内容</a></li>
+        </ul>
+
+        <h3 id="gaiyo">概要</h3>
+        <p>
+            概要を書こう
+        </p>
+
+        <h3 id="date">日時</h3>
+        <p>
+            いつやんねん
+        </p>
+
+        <h3 id="location">場所</h3>
+        <p>
+            どこでやんねん
+        </p>
+
+        <h3 id="content">ゲームの内容</h3>
+        <p>
+            アビョー
+        </p>
+    </div>
+
+</body>
+</html>

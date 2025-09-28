@@ -15,6 +15,8 @@
     --border-color: #ffffff;
     --border-accent: #555;
     --button-bg: #87cefa;
+    --text-highlight-red: #ff5050; /* ダークモード用の少し明るい赤 */
+    --text-muted-gray: #aaaaaa;  /* ダークモード用の明るいグレー */
 }
 
 /* ライトモードの時の色の定義 */
@@ -30,6 +32,8 @@ body.light-mode {
     --border-color: #000000;
     --border-accent: #dddddd;
     --button-bg: #0056b3;
+    --text-highlight-red: #d90429; /* ライトモード用の暗めの赤 */
+    --text-muted-gray: #6c757d;   /* ライトモード用の暗いグレー */
 }
 
 
@@ -173,4 +177,12 @@ a { display: block; height: 100%; }
     .item5 { grid-column: 2 / 3; grid-row: 2 / 4; }
     .item6 { grid-column: 2 / 3; grid-row: 4 / 5; }
     .content-body { padding: 20px 15px; }
+}
+
+.text-red {
+    color: var(--text-highlight-red);
+}
+
+.text-gray {
+    color: var(--text-muted-gray);
 }

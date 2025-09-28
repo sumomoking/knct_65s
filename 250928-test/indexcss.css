@@ -207,7 +207,6 @@ a {
 #page-top-btn.show {
     opacity: 1;
     visibility: visible;
-
 }
 
 @media (max-width: 768px) {
@@ -260,4 +259,36 @@ a {
         padding: 20px 15px;
     }
 
+}
+
+.content-body img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 25px auto; /* 画像の上下に余白を設け、中央に配置 */
+    border-radius: 5px; /* お好みで角を少し丸くする */
+}
+
+.content-body p a {
+    color: #87cefa; /* リンクの色を水色に指定 */
+    text-decoration: underline; /* リンクに下線を引く */
+}
+
+/* リンクにマウスを乗せた時のスタイル */
+.content-body p a:hover {
+    color: #ffffff; /* マウスを乗せたら白に */
+    text-decoration: none; /* 下線を消す */
+}
+
+.copyright-bar {
+    /* position: fixed; など位置固定の指定を削除 */
+    background-color: #000000; /* 背景を黒に */
+    padding: 10px 0; /* 少し余白を調整 */
+    margin-top: 15px; /* 上のバナーとの隙間 */
+}
+
+.copyright-bar marquee {
+    color: yellow; /* 文字色を黄色に */
+    font-size: 14px;
+    font-weight: bold;
 }

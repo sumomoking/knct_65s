@@ -4,29 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>久留米高専1Sのホームページ</title>
-    <link rel="stylesheet" href="indexcss.css">
+    <link rel="stylesheet" href="newcss.css">
 </head>
-
-<!--ボタンだよ-->
-<div id="page-top-btn">↑</div>
-<script>
-        const pageTopBtn = document.getElementById('page-top-btn');
-
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 300) {
-                pageTopBtn.classList.add('show');
-            } else {
-                pageTopBtn.classList.remove('show');
-            }
-        });
-
-        pageTopBtn.addEventListener('click', () => {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        });
-    </script>
 
 <body>
 
@@ -35,13 +14,14 @@
     </header>
 
     <div class="marquee-container">
-        <marquee>久留米高専1Sのホームページへようこそ！高専祭にも是非お越しください😃</marquee>
+        <marquee behavior="alternate" scrollamount="4">久留米高専1Sのホームページへようこそ！高専祭にも是非お越しください😃</marquee>
+        <button id="theme-toggle-btn">ライトモード</button>
+    </div>
 
     <main class="grid-container">
         <div class="grid-item item1">
             <img src="img/top.gif" alt="gif 1" width="1000" height="750">
         </div>
-
         <div class="grid-item item2">
             <a href="https://twitter.com/knct_65s">
                 <img src="img/twitter2.gif" alt="Twitter" width="200" height="100">
@@ -65,13 +45,11 @@
                 <img src="img/sumaho.gif" alt="gif 6">
             </a>
         </div>
-        </main>
+    </main>
     
     <footer class="footer">
         <img src="img/banner.gif" alt="gif 7" width="1024" height="68">
     </footer>
-
-    <!--本文だよ-->
 
     <div class="content-body">
         <h2>2025年高専祭 1Sの出店の案内</h2>
@@ -89,15 +67,15 @@
 
         <h3 id="date">日時</h3>
         <p>
-            11月2日（<font color="red">日</font>）<br>
-            11月3日（<font color="red">月</font>）※文化の日<br>
+            11月2日（<span class="text-red">日</span>）<br>
+            11月3日（<span class="text-red">月</span>）※文化の日<br>
             営業時間 0:00~24:00
         </p>
 
         <h3 id="location">場所</h3>
         <p>
             一般教室棟 2階 203教室<br>
-            <font color="gray">※正門入って左奥の[久留米高専]の看板がある校舎ですヨ!</font><br>
+            <span class="text-gray">※正門入って左奥の[久留米高専]の看板がある校舎ですヨ!</span><br>
             <a href="https://www.kurume-nct.ac.jp/">詳細な行き方はコチラ</a>
         </p>
         
@@ -112,6 +90,53 @@
     <div class="copyright-bar">
         <marquee behavior="alternate" scrollamount="20">&copy; 2025 久留米高専1S</marquee>
     </div>
+
+    <div id="page-top-btn">↑</div>
+    
+    <script>
+        // トップへ戻るボタンのスクリプト
+        const pageTopBtn = document.getElementById('page-top-btn');
+        if (pageTopBtn) {
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 300) {
+                    pageTopBtn.classList.add('show');
+                } else {
+                    pageTopBtn.classList.remove('show');
+                }
+            });
+            pageTopBtn.addEventListener('click', () => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        }
+    </script>
+    <script>
+        // テーマ切替のスクリプト
+        const themeToggleBtn = document.getElementById('theme-toggle-btn');
+        const body = document.body;
+        if (themeToggleBtn) {
+            const updateButtonText = () => {
+                if (body.classList.contains('light-mode')) {
+                    themeToggleBtn.textContent = 'ダークモード';
+                } else {
+                    themeToggleBtn.textContent = 'ライトモード';
+                }
+            };
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme === 'light') {
+                body.classList.add('light-mode');
+            }
+            updateButtonText();
+            themeToggleBtn.addEventListener('click', () => {
+                body.classList.toggle('light-mode');
+                if (body.classList.contains('light-mode')) {
+                    localStorage.setItem('theme', 'light');
+                } else {
+                    localStorage.setItem('theme', 'dark');
+                }
+                updateButtonText();
+            });
+        }
+    </script>
 
 </body>
 </html>

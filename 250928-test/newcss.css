@@ -186,3 +186,41 @@ a { display: block; height: 100%; }
 .text-gray {
     color: var(--text-muted-gray);
 }
+
+/* 親要素 (PCでの表示) */
+.media-object {
+    display: flex; /* 子要素を横並びにする魔法の指定 */
+    align-items: flex-start; /* 上揃えで配置 */
+    gap: 20px; /* 画像と文章の間の隙間 */
+    margin: 40px 0; /* 上下の他の要素との余白 */
+}
+
+/* 左側の画像ブロック */
+.media-image {
+    flex-basis: 35%; /* 全体の幅の35%を画像の幅として確保 */
+}
+.media-image img {
+    /* 画像が親要素の幅いっぱいになるように */
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* 右側の文章ブロック */
+.media-body {
+    flex: 1; /* 残りのスペースをすべて文章エリアとして使う */
+}
+
+/* 文章ブロック内の見出しや段落のマージンを調整 */
+.media-body h4 {
+    margin-top: 0;
+}
+
+
+/* --- スマホ用のスタイル --- */
+@media (max-width: 768px) {
+    .media-object {
+        /* 横並びを縦並びに変更 */
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>久留米高専1Sのホームページ-ライアーダイスの遊び方</title>
+    <link rel="stylesheet" href="../newcss.css">
+    <link rel=”icon” href=“favicon.ico”>
+</head>
+
+<div class="content-body">
+        <h2>ライアーダイスの遊び方</h2>
+        <img src="../img/game/raia.gif">
+        <ul class="toc">
+            <li><a href="#gaiyo">・概要</a></li>
+            <li><a href="#">・</a></li>
+        </ul>
+
+<div class="copyright-bar">
+        <marquee behavior="alternate" scrollamount="20">&copy; 2025 久留米高専1S</marquee>
+    </div>
+
+    <div id="page-top-btn">↑</div>
+    
+    <script>
+        // トップへ戻るボタンのスクリプト
+        const pageTopBtn = document.getElementById('page-top-btn');
+        if (pageTopBtn) {
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 300) {
+                    pageTopBtn.classList.add('show');
+                } else {
+                    pageTopBtn.classList.remove('show');
+                }
+            });
+            pageTopBtn.addEventListener('click', () => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        }
+    </script>

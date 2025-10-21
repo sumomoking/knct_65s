@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>久留米高専1Sのホームページ-アルゴの遊び方</title>
+    <link rel="stylesheet" href="../newcss.css">
+    <link rel=”icon” href=“favicon.ico”>
+</head>
+
+<div class="content-body">
+        <h2>アルゴの遊び方</h2>
+        <img src="../img/game/arugo.gif">
+        <ul class="toc">
+            <li><a href="#gaiyo">・概要</a></li>
+            <li><a href="#junbi">・ゲームの準備</a></li>
+            <li><a href="#rule">・基本ルール</a></li>
+            <li><a href="#tejun">・手順</a></li>
+            <li><a href="#shohai">・勝敗</a></li>
+            <li><a href="#sikkaku">・失格</a></li>
+        </ul>
+
+        <h3 id="gaiyo">概要</h3>
+        <p><span class="text-gray">
+            「アルゴ」は、黒白それぞれ0から11までの数字カードを使用するゲームです。各プレイヤーは配られた手札を小さい順に左から並べて伏せて持ちます。<br>自分のターンでは山札からカードを1枚引き、他のプレイヤーの伏せられた手札の数字を予想します。予想が当たればそのカードを公開させ、さらに予想を続けることができます。<br>予想が外れた場合は、山札から引いたばかりのカードを公開してターン終了です。<br>ゲームは、全ての手札が公開されたプレイヤーから順に脱落し、最後まで手札が公開されずに残ったプレイヤーがそのラウンドの勝者となります。
+        </p></span>
+
+        <h3 id="junbi">ゲームの準備</h3>
+        <p>
+            ① プレイヤーの決定：<span class="text-gray">はじめに、最初のプレイヤーを決めます。</span><br>
+            ② カードの配布：<span class="text-gray">各プレイヤーに以下の枚数のカードを配ります。</span><br>
+            <span class="text-gray">
+                ・2人プレイ：各6枚<br>
+                ・3人プレイ：各5枚<br>
+                ・4人プレイ：各4枚<br>
+            </span>
+
+        </p>
+
+        <h3 id="rule">基本ルール</h3>
+        <p>
+            <b>○カード：</b><span class="text-gray">カードは黒と白の2色があり、それぞれ「0」から「11」までの数字が書かれています（計24枚）。</span><br><br>
+            <b>○配置：</b><span class="text-gray">手持ちのカードは、<b>左から小さい順</b>に並べて表が見えないように置きます。<br>※黒0→白0→黒1→白1→…のように。</span><br><br>
+            <b>○敗北条件：</b><span class="text-gray">後述の<b>「失格となる行為」</b>をした場合、手持ちのカード全てを公開して、ゲームから抜けます。</span>
+        </p>
+
+        <h3 id="tejun">手順</h3>
+        <p>
+            <span class="text-gray">手番のプレイヤーは順に以下の手順を行います。</span><br>
+            <b>① カードを引く</b><br>
+            <b>② カードの数字の予想</b><br>
+            <b>③ カードを引く</b><br>
+            <b>① カードを引く</b><br>
+        </p>
+
+
+        <h3 id="shohai">勝敗</h3>
+
+        <h3 id="sikkaku">失格</h3>
+
+<div class="copyright-bar">
+        <marquee behavior="alternate" scrollamount="20">&copy; 2025 久留米高専1S</marquee>
+    </div>
+
+    <div id="page-top-btn">↑</div>
+    
+    <script>
+        // トップへ戻るボタンのスクリプト
+        const pageTopBtn = document.getElementById('page-top-btn');
+        if (pageTopBtn) {
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 300) {
+                    pageTopBtn.classList.add('show');
+                } else {
+                    pageTopBtn.classList.remove('show');
+                }
+            });
+            pageTopBtn.addEventListener('click', () => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        }
+    </script>

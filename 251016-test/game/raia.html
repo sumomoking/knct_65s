@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>久留米高専1Sのホームページ-ライアーダイスの遊び方</title>
+    <link rel="stylesheet" href="../newcss.css">
+    <link rel=”icon” href=“favicon.ico”>
+</head>
+
+<div class="content-body">
+        <h2>ライアーダイスの遊び方</h2>
+        <img src="../img/game/raia.gif">
+        <ul class="toc">
+            <li><a href="#gaiyo">・概要</a></li>
+            <li><a href="#junbi">・準備</a></li>
+            <li><a href="#shinko">・ゲーム進行</a></li>
+            <li><a href="#kaiketsu">・「ライアー」の解決</a></li>
+            <li><a href="#finish">・ゲームの終了と勝者</a></li>
+        </ul>
+
+        <h3 id="gaiyo">概要</h3>
+        <p><span class="text-gray">
+            このゲームは2人から4人でプレイします 。各プレイヤーはカップに隠した自分のサイコロの出目を確認し、全プレイヤーのサイコロの出目と数を予想して宣言し合います。相手の宣言が嘘（ライアー）だと思ったらそれを指摘します。
+        </p></span>
+
+        <h3 id="junbi">準備</h3>
+        <p><span class="text-gray">
+            1.各プレイヤーに、さいころ5個、カップ1つ、毒薬カード2枚を配ります 。<br>
+        </p></span>
+
+        <h3 id="shinko">ゲーム進行</h3>
+        <p><span class="text-gray">
+            1.各プレイヤーはカップでさいころを振り、机の上に伏せて置きます 。<br>
+            2.全プレイヤーが振り終えたら、自分のサイコロの出目だけをこっそり確認します 。<br>
+            3.親は、場にある全てのサイコロ（自分のも含む）について、「特定の出目」が「何個あるか」を自由に宣言します（例：「3」が「2個」） 。<br>
+            4.次のプレイヤーは、前のプレイヤーの宣言に対し「ライアー」とコールするか、より強い宣言をします 。<br>※強い宣言とは：前の宣言より「多い数」（例：「3」が「3個」）を宣言するか、より「大きな出目」（例：「4」が「2個」）を宣言します 。<br>
+            5.「ライアー」がコールされなかった場合、次のプレイヤーが同様に宣言を行います 。<br>
+        </p></span>
+
+        <h3 id="kaiketsu">「ライアー」の解決</h3>
+        <p><span class="text-gray">
+            1.いずれかのプレイヤーが「ライアー」とコールした場合、全プレイヤーはサイコロをオープンします 。<br>
+            2.宣言が正しかったか（宣言された出目が宣言された数以上あったか）を調べます 。<br>・宣言が正だった場合：「ライアー」とコールしたプレイヤーが毒薬を1つ飲みます 。<br>・宣言が誤だった場合：「ライアー」と言われたプレイヤー（宣言者）が毒薬を1つ飲みます 。<br>
+            3.毒薬を飲んだプレイヤーから次のラウンドが始まります 。<br>
+            4.（注意）ラウンドが30秒経過した場合、宣言中のプレイヤーが毒薬を1つ飲みます 。<br>
+        </p></span>
+
+        <h3 id="finish">ゲームの終了と勝者</h3>
+        <p><span class="text-gray">
+            1.毒薬を2つ飲んだプレイヤーは脱落となります 。<br>
+            2.プレイヤーが1人になるまでゲームは続き 、脱落するのが遅かった順に順位が決定します 。<br>
+        </p></span>
+
+
+<div class="copyright-bar">
+        <marquee behavior="alternate" scrollamount="20">&copy; 2025 久留米高専1S</marquee>
+    </div>
+
+    <div id="page-top-btn">↑</div>
+    
+    <script>
+        // トップへ戻るボタンのスクリプト
+        const pageTopBtn = document.getElementById('page-top-btn');
+        if (pageTopBtn) {
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 300) {
+                    pageTopBtn.classList.add('show');
+                } else {
+                    pageTopBtn.classList.remove('show');
+                }
+            });
+            pageTopBtn.addEventListener('click', () => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        }
+    </script>

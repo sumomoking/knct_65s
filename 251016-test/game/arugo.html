@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>久留米高専1Sのホームページ-アルゴの遊び方</title>
+    <link rel="stylesheet" href="../newcss.css">
+    <link rel=”icon” href=“favicon.ico”>
+</head>
+
+<div class="content-body">
+        <h2>アルゴの遊び方</h2>
+        <img src="../img/game/arugo.gif">
+        <ul class="toc">
+            <li><a href="#gaiyo">・概要</a></li>
+            <li><a href="#junbi">・準備</a></li>
+            <li><a href="#shinko">・ゲーム進行</a></li>
+            <li><a href="#finish">・ゲームの終了と勝者</a></li>
+        </ul>
+
+        <h3 id="gaiyo">概要</h3>
+        <p><span class="text-gray">
+        </p></span>
+
+        <h3 id="gaiyo">概要</h3>
+        <p><span class="text-gray">
+            このゲームは2人から4人でプレイします 。1プレイは3ゲームで構成されます 。プレイヤーは相手の伏せられたカードの数字を推理し、当てていきます。<br>
+        </p></span>
+
+        <h3 id="junbi">準備</h3>
+        <p><span class="text-gray">
+            1.0から11までの黒カード12枚 と、0から11までの白カード12枚 、およびポイントチップ  を準備します。<br>
+            2.親は白黒のカードをすべて裏向きでシャッフルし、山札として中央に置きます 。<br>
+            3.各プレイヤーに4枚ずつカードを配ります 。<br>
+            4.配られたカードは、自分から見て左から右へ、数字の小さい順に一列に並べます 。<br>※同じ数字がある場合は、「黒の方が小さい」というルールで並べます 。<br>
+        </p></span>
+
+        <h3 id="shinko">ゲーム進行</h3>
+        <p><span class="text-gray">
+            1.親から手番を開始し、時計回りに進行します 。<br>
+            2.手番プレイヤーは山札からカードを1枚引きます 。このカードもルール通りに自分の列に加えます 。<br>
+            3.次に、自分以外のプレイヤーのカードを1枚選び、その数字を予想します 。<br>
+            4.予想されたプレイヤーは、結果が真（当たり）ならカードを「オープン」し、偽（ハズレ）ならそのままにします 。<br>
+            5.予想したプレイヤーは、以下のように行動します。<br>・予想が真（当たり）の場合：「他のカードを選ぶ」（続けて3の行動を繰り返す）か、「次のターンに進む」かを選べます 。<br>・予想が偽（ハズレ）の場合：自分が2で引いたカードを「オープン」し、次のターンに進みます 。<br>
+        </p></span>
+
+        <h3 id="finish">ゲームの終了と勝者</h3>
+        <p><span class="text-gray">
+            1.上記の手順を繰り返し 、全てのカードがオープンになったプレイヤーは負けとなります 。3人以上の場合、順位が決まるまで続けます 。<br>
+            2.予想が成功すると、当てた人は相手から10点もらえます（当てたカードが「6」ならボーナスでさらに10点） 。<br>
+            3.ラウンドの勝者は、「残った（オープンでない）カードの枚数」×10点を、他のプレイヤー全員からもらえます 。<br>
+            4.カードの並べ方を間違えたり、予想に対して嘘の回答をしたりするとペナルティ（失格）となり、全てのカードをオープンしなければなりません 。<br>
+        </p></span>
+
+
+
+
+
+
+<div class="copyright-bar">
+        <marquee behavior="alternate" scrollamount="20">&copy; 2025 久留米高専1S</marquee>
+    </div>
+
+    <div id="page-top-btn">↑</div>
+    
+    <script>
+        // トップへ戻るボタンのスクリプト
+        const pageTopBtn = document.getElementById('page-top-btn');
+        if (pageTopBtn) {
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 300) {
+                    pageTopBtn.classList.add('show');
+                } else {
+                    pageTopBtn.classList.remove('show');
+                }
+            });
+            pageTopBtn.addEventListener('click', () => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        }
+    </script>

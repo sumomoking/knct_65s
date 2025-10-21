@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>久留米高専1Sのホームページ-ラブレターの遊び方</title>
+    <link rel="stylesheet" href="../newcss.css">
+    <link rel=”icon” href=“favicon.ico”>
+</head>
+
+<div class="content-body">
+        <h2>ラブレターの遊び方</h2>
+        <img src="../img/game/rabu.gif">
+        <ul class="toc">
+            <li><a href="#gaiyo">・概要</a></li>
+            <li><a href="#junbi">・準備</a></li>
+            <li><a href="#shinko">・ゲーム進行</a></li>
+            <li><a href="#finish">・ゲームの終了と勝者</a></li>
+        </ul>
+
+
+        <h3 id="gaiyo">概要</h3>
+        <p><span class="text-gray">
+            このゲームは2人から4人でプレイします 。1プレイは3ゲームから9ゲームで構成されます 。プレイヤーはカードを駆使して他のプレイヤーを脱落させ、最後まで生き残るか、ゲーム終了時に最も強いカードを持っていることを目指します。
+        </p></span>
+
+        <h3 id="junbi">準備</h3>
+        <p><span class="text-gray">
+            1.「兵士」 、「姫」 、「大臣」 、「将軍」 、「魔術師」 、「僧侶」 、「騎士」 、「道化」 のカードと、「ハートコイン」  を準備します。<br>
+            2.親はカードをシャッフルし、伏せた山札とします 。<br>
+            3.山札の一番上のカードを、誰も見ずに脇によけます（このカードはゲームで使用しません）。 <br>※2人プレイの場合、さらに山札から3枚を引き、表向きにして脇に公開します 。<br>
+            4.各プレイヤーは山札から1枚引き、手札とします 。<br>
+
+
+        </p></span>
+
+        <h3 id="shinko">ゲームの進行</h3>
+        <p><span class="text-gray">
+            1.親（または親が指定した人）から手番を開始し、時計回りに進行します 。<br>
+            2.手番プレイヤーは、山札からカードを1枚引いて手札に加えます 。<br>
+            3.手札が2枚になったら、どちらか1枚を選んで場に出し、公開します 。<br>
+            4.公開したカードに「効果」が記されている場合、必ずその指示に従います 。<br>
+            5.公開したカードは自分の捨て札となり、出した順番が分かるように並べます 。<br>
+            6.カード効果の解決後、手番は終了し、左隣のプレイヤーに移ります 。<br>
+            7.カード効果によって脱落した場合、手札を公開して捨て札に加えます 。<br>
+
+        </p></span>
+
+        <h3 id="shinko">ゲームの終了と勝者</h3>
+        <p><span class="text-gray">
+            ゲームは以下のどちらかの条件で終了します 。<br>
+            ① 山札がなくなったとき 最後のカードが引かれた手番の終了時 、脱落していない全プレイヤーが手札を公開します 。その中で最もカードの「強さ」が最大だったプレイヤーが勝者となります 。<br>
+            ② 1人以外が脱落したとき ただちにゲームは終了し 、最後まで残ったプレイヤーが勝者となります 。<br>
+            勝者となったプレイヤーは、ハートコインを1枚もらいます 。<br>
+
+
+        </p></span>
+
+
+
+<div class="copyright-bar">
+        <marquee behavior="alternate" scrollamount="20">&copy; 2025 久留米高専1S</marquee>
+    </div>
+
+    <div id="page-top-btn">↑</div>
+    
+    <script>
+        // トップへ戻るボタンのスクリプト
+        const pageTopBtn = document.getElementById('page-top-btn');
+        if (pageTopBtn) {
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 300) {
+                    pageTopBtn.classList.add('show');
+                } else {
+                    pageTopBtn.classList.remove('show');
+                }
+            });
+            pageTopBtn.addEventListener('click', () => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        }
+    </script>

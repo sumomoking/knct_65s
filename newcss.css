@@ -14,6 +14,7 @@
     --text-muted-gray: #aaaaaa;
     --text-purple:#ff00ff;
     --text-aquamarine:#7fffd4;
+    --text-yellow:#F4E511;
 }
 
 body.light-mode {
@@ -32,6 +33,7 @@ body.light-mode {
     --text-muted-gray: #6c757d;
     --text-purple:#ff00ff;
     --text-aquamarine:#7fffd4;
+    --text-yellow:#F4E511;
 }
 
 
@@ -186,6 +188,11 @@ a { display: block; height: 100%; }
 .text-red {
     color: var(--text-highlight-red);
 }
+
+.text-yellow {
+    color: var(--text-yellow);
+}
+
 
 .text-gray {
     color: var(--text-muted-gray);
